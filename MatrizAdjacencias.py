@@ -14,16 +14,16 @@ class Grafo:
     def mostra_matriz(self):
         print("A matriz de adjacências é")
         for i in range(self.vertices):
-            print(i)
+            #print(i)
             print(self.grafo[i])
         #MOstra tudo, porém em uma linha só
         #print(self.grafo.__str__())
 
-
-g = Grafo(5)
-g.mostra_matriz()
-g.adiciona_aresta(1,2)
-g.adiciona_aresta(1,3)
-g.adiciona_aresta(1,4)
-g.adiciona_aresta(2,5)
+v = int(input("Digite a quantidade de vertices: "))
+g = Grafo(v)
+a = int(input("Digite a quantidade de arestas: "))
+for i in range(a):
+    vertice_u = int(input("De onde parte o vertice?"))
+    vertice_v = int(input("Para qual direção?"))
+    g.adiciona_aresta(vertice_u, vertice_v)
 g.mostra_matriz()
