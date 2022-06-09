@@ -19,6 +19,7 @@ class Grafo:
         #MOstra tudo, porém em uma linha só
         #print(self.grafo.__str__())
 
+
 v = int(input("Digite a quantidade de vertices: "))
 g = Grafo(v)
 a = int(input("Digite a quantidade de arestas: "))
