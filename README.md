@@ -22,3 +22,6 @@ https://docs.readme.com/docs/linking-to-pages
 <a href="https://www.w3schools.com/python/python_ref_dictionary.asp" target="_blank"> Dictionary</a>
 <br>
 <a href="https://www.w3schools.com/python/python_ref_list.asp" target="_blank"> List</a>
+
+### Construção da API
+<a href="https://realpython.com/api-integration-in-python/">Python and REST APIs: Interacting With Web Services</a>
