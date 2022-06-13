@@ -1,5 +1,4 @@
 import json
-from collections import defaultdict
 
 class Grafo:
 
@@ -8,10 +7,10 @@ class Grafo:
         self.grafo = {
             'Ana':['Maria','João','Carlos','Vinicius'],
             'Maria':['Ana','Vinicius'],
-            'João':['Luiza'],
-            'Carlos':['Ana'],
-            'Vinicius':['Ana'],
-            'Luiza':['João']
+            'Vinicius': ['Ana'],
+            'Luiza': ['João'],
+            'Carlos': ['Ana'],
+            'João':['Luiza']
         }
 
     def toJson(self):
@@ -32,7 +31,7 @@ class Grafo:
 
     def mostra_conexao_n2(self,pessoa):
         conexao_n2 = list()
-#Validar se com matriz de adjacência é possível diminuir a complexidade
+    #Validar se com matriz de adjacência é possível diminuir a complexidade
         for conexao in self.grafo[pessoa]:
             for possivelconexao in self.grafo[conexao]:
                 if possivelconexao not in self.grafo[pessoa] and possivelconexao != pessoa:
