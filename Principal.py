@@ -14,26 +14,13 @@ class Grafo:
         print(f'Vizinhos de {pessoa}: {self.grafo[pessoa]}')
 
     def mostra_conexao_n2(self,pessoa):
-
-        naoconexao = list()
-        conexaodaconexao = list()
-        # problema 1 - Considera a rede inteira
-        for i in self.grafo.keys():
-            if(i != pessoa):
-                if i not in self.grafo[pessoa] and i not in naoconexao:
-                    #para adicionar todos que não são minha conexao
-                    naoconexao.append(i)
-                else:#adiciona os vizinhos do meu vizinho
-                    for c in self.grafo[i]:
-                        if c not in conexaodaconexao and c != pessoa:
-                            conexaodaconexao.append(c)
-        #Para depois validar se dentro das minhas desconexões, há algum vizinho do meu vizinho.
         conexao_n2 = list()
-        for n in naoconexao:
-            if n in conexaodaconexao:
-                conexao_n2.append(n)
+#Há possibilidade de diminuir para O(n) ?
+        for conexao in self.grafo[pessoa]:
+            for possivelconexao in self.grafo[conexao]:
+                if possivelconexao not in self.grafo[pessoa] and possivelconexao != pessoa:
+                    conexao_n2.append(possivelconexao)
         print(conexao_n2)
-        #Talvez seja uma alternativa, primeiro ver os vizinhos do meus vizinhos, e depois validar se eles estão dentro da minha vizinhança
 
 
     def estado_atual(self):
