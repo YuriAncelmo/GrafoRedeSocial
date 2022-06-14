@@ -22,13 +22,16 @@ class Rede:
         self.grafo[pessoa_a].add(pessoa_b)
         self.grafo[pessoa_b].add(pessoa_a)
 
-    def adiciona_pessoa(self, pessoa, conexoes):
+    def adiciona_pessoa(self, nome, conexoes):
         # adiciona na lista de adjacência
-        for conexao in conexoes:
-            self.adiciona_conexao(pessoa, conexao)
+        # precisa validar se já existes
+        self.grafo[nome] = conexoes
+
+    def pessoa_existe(self, nome):
+        return nome in self.grafo
 
     def mostra_conexao_n1(self, pessoa):
-        print(f'Vizinhos de {pessoa}: {self.grafo[pessoa]}')
+        return self.grafo[pessoa]
 
     def mostra_conexao_n2(self, pessoa):
         conexao_n2 = list()
@@ -37,7 +40,7 @@ class Rede:
             for possivelconexao in self.grafo[conexao]:
                 if possivelconexao not in self.grafo[pessoa] and possivelconexao != pessoa:
                     conexao_n2.append(possivelconexao)
-        print(conexao_n2)
+        return conexao_n2
 
     def estado_atual(self):
         return list(self.grafo.keys())

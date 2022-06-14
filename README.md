@@ -1,6 +1,19 @@
 # GrafoRedeSocial
 Criação de um Webservice que disponibilize a criação de uma rede de conexões
 
+## Conceitos utilizados
+
+### Blueprint
+Para que a API seja como uma planta, e possa ser reutilizada para construção de outras aplicações
+
+## Tecnologias e Frameworks 
+- Python3 
+  - Flask 
+  - Flask RESTPlus
+  - pytest
+- Swagger
+- Docker
+
 ## Referências
 
 ### Professor Douglas Maioli
@@ -22,6 +35,8 @@ https://docs.readme.com/docs/linking-to-pages
 <a href="https://www.w3schools.com/python/python_ref_dictionary.asp" target="_blank"> Dictionary</a>
 <br>
 <a href="https://www.w3schools.com/python/python_ref_list.asp" target="_blank"> List</a>
-
+<br>
+<a href="https://flask-restplus.readthedocs.io/en/stable/">Documentação oficial Flask RESTPlus</a>
 ### Construção da API
 <a href="https://realpython.com/api-integration-in-python/">Python and REST APIs: Interacting With Web Services</a>
+<a href="https://medium.com/trainingcenter/flask-restplus-ea942ec30555"> Flask RESTPlus</a>
