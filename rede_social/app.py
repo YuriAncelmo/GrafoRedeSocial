@@ -72,7 +72,11 @@ class Pessoa(Resource):
         parser.add_argument('conexoes', action='append')
         args = parser.parse_args()
         nome = args['nome']
+        if nome is None:
+            return {"Erro": 'Nome da pessoa não especificado'}, 400
         conexoes = args['conexoes']
+        if conexoes is None:
+            conexoes = []
         if rede.pessoa_existe(nome):
             return {"Erro": 'Pessoa já existe'}, 409
         if not rede.conexoes_existem(conexoes):
