@@ -3,7 +3,7 @@ Criação de um Webservice que disponibilize a criação de uma rede de conexõe
 
 ## Como rodar o projeto
 No root do repositório, execute o arquivo run.cmd. 
-Será exposto no seu http://localhost:8000/ a documentação Swagger UI para utilização
+Será exposto no seu http://localhost:8000/ a documentação Swagger UI com instruções para utilização da API.
 
 ## Tecnologias e Frameworks 
 - Python3 
