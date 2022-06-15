@@ -1,5 +1,4 @@
 import json
-from typing import List
 
 
 class Rede:
@@ -30,17 +29,23 @@ class Rede:
     def pessoa_existe(self, nome):
         return nome in self.grafo
 
-    def mostra_conexao_n1(self, pessoa):
-        return self.grafo[pessoa]
+    def conexoes_existem(self, conexoes):
+        for conexao in conexoes:
+            if not self.pessoa_existe(conexao):
+                return False
+        return True
 
-    def mostra_conexao_n2(self, pessoa):
-        conexao_n2 = list()
-    # Validar se com matriz de adjacência é possível diminuir a complexidade
-        for conexao in self.grafo[pessoa]:
-            for possivelconexao in self.grafo[conexao]:
-                if possivelconexao not in self.grafo[pessoa] and possivelconexao != pessoa:
-                    conexao_n2.append(possivelconexao)
-        return conexao_n2
+    def mostra_conexoes(self, pessoa, nivel):
+        if nivel == "1":
+            return self.grafo[pessoa]
+        if nivel == "2":
+            conexao_n2 = list()
+            # Validar se com matriz de adjacência é possível diminuir a complexidade
+            for conexao in self.grafo[pessoa]:
+                for possivelconexao in self.grafo[conexao]:
+                    if possivelconexao not in self.grafo[pessoa] and possivelconexao != pessoa:
+                        conexao_n2.append(possivelconexao)
+            return conexao_n2
 
     def estado_atual(self):
         return list(self.grafo.keys())
@@ -48,4 +53,3 @@ class Rede:
     def mostra_lista(self):
         for pessoa in self.grafo.keys():
             print(f'{pessoa}: {self.grafo[pessoa]} ', end='   ')
-
