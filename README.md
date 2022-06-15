@@ -1,12 +1,16 @@
 # GrafoRedeSocial
 Criação de um Webservice que disponibilize a criação de uma rede de conexões
 
+## Como rodar o projeto
+No root do repositório, execute o arquivo run.cmd. 
+Será exposto no seu http://localhost:8000/ a documentação Swagger UI para utilização
+
 ## Tecnologias e Frameworks 
 - Python3 
   - Flask 
   - Flask RESTx
 - Swagger
-- Docker em com containers Linux
+- Docker com containers no SO Linux
 
 ## Referências
 
@@ -37,6 +41,7 @@ https://docs.readme.com/docs/linking-to-pages
 <a href="https://ebasso.net/wiki/index.php?title=Docker:_Criando_a_Docker_Image_com_o_Python_e_Flask">Docker: Python + Flask</a>
 <br>
 <a href="https://docs.docker.com/language/python/build-images/">Build images</a>
+
 ### Construção da API
 <a href="https://realpython.com/api-integration-in-python/">Python and REST APIs: Interacting With Web Services</a>
 <br>
